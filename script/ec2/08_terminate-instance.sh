@@ -1,4 +1,4 @@
-$INSTANCEID=${1:-NO}
+INSTANCEID=${1:-NO}
 
 if [ "$INSTANCEID" = "NO" ]
 then

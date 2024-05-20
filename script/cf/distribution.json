@@ -1,0 +1,31 @@
+{
+    "CallerReference": "cf-cli-distribution",
+    "Comment": "LearnAWS Cloudfront Distribution",
+    "Origins": {
+        "Quantity": 1,
+        "Items": [{
+            "Id": "learnaws-test-versioning-s3",
+            "DomainName": "learnaws-test-versioning-s3.s3.amazonaws.com",
+            "S3OriginConfig": {
+                "OriginAccessIdentity": ""
+            }
+        }]
+    },
+    "DefaultCacheBehavior": {
+        "TargetOriginId": "learnaws-test-versioning-s3",
+        "ViewerProtocolPolicy": "redirect-to-https",
+        "TrustedSigners": {
+            "Quantity": 0,
+            "Enabled": false
+        },
+        "ForwardedValues": {
+            "Cookies": {"Forward": "all"},
+            "Headers": {"Quantity": 0},
+            "QueryString": false,
+            "QueryStringCacheKeys": {"Quantity": 0}
+        },
+        "DefaultTTL": 86400,
+        "MinTTL": 3600
+    },
+    "Enabled": true
+}
